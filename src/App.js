@@ -16,8 +16,10 @@ import MenuDrawer from "./Components/MenuDrawer";
 import TopAppBar from "./Components/TopAppBar";
 import Child from "./Components/ParentChild/Child";
 import Parent from "./Components/ParentChild/Parent";
+import Drawer from "@material-ui/core/Drawer";
+import MenuItem from "@material-ui/core/MenuItem";
 
-/*
+
 class App extends Component {
 
   constructor(props) {
@@ -33,21 +35,31 @@ class App extends Component {
   }
 
   render() {
-    const handleDrawer = this.handleDrawerTouch.bind(this);
     return (
       <div className="App">
-        <TopAppBar
-          title="MyApp"
-          onLeftButtonTouch={handleDrawer}
-        />
+        <AppBar title="MyApp">
+          <Toolbar>
+            <IconButton color="inherit" aria-label="Menu" onClick={this.handleDrawerTouch.bind(this)}>
+              <MenuIcon/>
+            </IconButton>
+            <Typography variant="title" color="inherit">Title Of App</Typography>
+          </Toolbar>
+        </AppBar>
         <Button variant="raised" color="primary">Hello World!</Button>
-        <MenuDrawer open={this.state.drawerOpen}/>
+        <Drawer
+          open={this.state.drawerOpen}
+          onClose={this.handleDrawerTouch.bind(this)}
+        >
+          <MenuItem>Menu Item 1</MenuItem>
+          <MenuItem>Menu Item 2</MenuItem>
+        </Drawer>
       </div>
     );
   }
 }
-*/
 
+
+/*
 class App extends Component {
   state = {
     title: "Placeholder Title",
@@ -69,5 +81,6 @@ class App extends Component {
     return result;
   }
 }
+*/
 
 export default App;
