@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "prettier 'src/**/*.js' 'src/Components/**/*.js' '*.js' --write --single-quote --no-semi && standard --fix",
+    "lint": "prettier 'src/**/*.js' 'src/Components/**/*.js' '*.js' --write --single-quote && standard --fix",
     "precommit": "lint-staged"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --write --single-quote --no-semi",
+      "prettier --write --single-quote",
       "standard --fix",
       "git add"
     ]
