@@ -1,8 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles';
-import indigo from '@material-ui/core/colors/indigo';
-import pink from '@material-ui/core/colors/pink';
-import red from '@material-ui/core/colors/red';
-import blueGrey from '@material-ui/core/colors/blueGrey';
+import { createMuiTheme } from '@material-ui/core/styles'
+import pink from '@material-ui/core/colors/pink'
+import red from '@material-ui/core/colors/red'
+import blueGrey from '@material-ui/core/colors/blueGrey'
 
 // All the following keys are optional.
 // We try our best to provide a great default value.
@@ -17,8 +16,8 @@ const MyTheme = createMuiTheme({
     // Used to shift a color's luminance by approximately
     // two indexes within its tonal palette.
     // E.g., shift from Red 500 to Red 300 or Red 700.
-    tonalOffset: 0.2,
-  },
-});
+    tonalOffset: 0.3
+  }
+})
 
-export default MyTheme;
+export default MyTheme
