@@ -1,20 +1,20 @@
-import {Component} from "react";
-import List from "@material-ui/core/List";
-import {mailFolderListItems, otherMailFolderListItems} from "./tileData";
-import Divider from "@material-ui/core/Divider";
-import Button from "@material-ui/core/Button";
-import Drawer from "@material-ui/core/Drawer";
-import PropTypes from "prop-types";
-import React from "react";
-import {withStyles} from "@material-ui/core/styles";
+import { Component } from 'react';
+import List from '@material-ui/core/List';
+import { mailFolderListItems, otherMailFolderListItems } from './tileData';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+import Drawer from '@material-ui/core/Drawer';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
   list: {
-    width: 250,
+    width: 250
   },
   fullList: {
-    width: 'auto',
-  },
+    width: 'auto'
+  }
 };
 
 class MenuDrawer extends Component {
@@ -37,7 +37,7 @@ class MenuDrawer extends Component {
     const sideList = (
       <div className={classes.list}>
         <List>{mailFolderListItems}</List>
-        <Divider/>
+        <Divider />
         <List>{otherMailFolderListItems}</List>
       </div>
     );
@@ -45,7 +45,7 @@ class MenuDrawer extends Component {
     const fullList = (
       <div className={classes.fullList}>
         <List>{mailFolderListItems}</List>
-        <Divider/>
+        <Divider />
         <List>{otherMailFolderListItems}</List>
       </div>
     );
@@ -53,7 +53,10 @@ class MenuDrawer extends Component {
     return (
       <div>
         <Button onClick={this.toggleDrawer('left', true)}>Open Left</Button>
-        <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
+        <Drawer
+          open={this.state.left}
+          onClose={this.toggleDrawer('left', false)}
+        >
           <div
             tabIndex={0}
             role="button"
@@ -64,8 +67,7 @@ class MenuDrawer extends Component {
           </div>
         </Drawer>
       </div>
-    )
-
+    );
   }
 }
 

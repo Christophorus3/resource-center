@@ -1,13 +1,13 @@
-import {Component} from "react";
-import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "../../node_modules/@material-ui/icons/Menu";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import {withStyles} from "@material-ui/core/styles";
-import React from "react";
+import { Component } from 'react';
+import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '../../node_modules/@material-ui/icons/Menu';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
+import React from 'react';
 
 const styles = {
   root: {
@@ -36,18 +36,28 @@ class TopAppBar extends Component {
       <div className={classes.root}>
         <AppBar position="static" color="default">
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={onLeftButtonTouch}>
-              <MenuIcon/>
+            <IconButton
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Menu"
+              onClick={onLeftButtonTouch}
+            >
+              <MenuIcon />
             </IconButton>
-            <Typography className={classes.flex} variant="title" color="inherit">{this.props.title}</Typography>
+            <Typography
+              className={classes.flex}
+              variant="title"
+              color="inherit"
+            >
+              {this.props.title}
+            </Typography>
             <Button color="secondary">Login</Button>
           </Toolbar>
         </AppBar>
       </div>
-    )
+    );
   }
 }
-
 
 TopAppBar.propTypes = {
   classes: PropTypes.object.isRequired

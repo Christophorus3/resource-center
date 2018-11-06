@@ -1,13 +1,13 @@
-import React from "react";
-import Child from "./Child";
+import React from 'react';
+import Child from './Child';
 
-const Parent = (props) => {
+const Parent = props => {
   return (
     <div>
-      <Child doWhatever={props.changeTheWorldEvent} title={props.title}/>
-      <Child doWhatever={props.keepTheWorldSameEvent} title={props.title}/>
+      <Child doWhatever={props.changeTheWorldEvent} title={props.title} />
+      <Child doWhatever={props.keepTheWorldSameEvent} title={props.title} />
     </div>
-  )
+  );
 };
 
 export default Parent;
